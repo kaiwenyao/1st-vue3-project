@@ -1,5 +1,5 @@
 import request from "../utils/request";
-// 查询员工列表数据
+// 分页查询员工
 export const queryPageApi = (name, gender, begin, end, page, pageSize) =>
   request.get(
     `/emps?name=${name}&gender=${gender}&begin=${begin}&end=${end}&page=${page}&pageSize=${pageSize}`
@@ -13,3 +13,5 @@ export const updateApi = (emp) => request.put("/emps", emp);
 export const queryInfoApi = (id) => request.get(`/emps/${id}`);
 // 删除
 export const deleteApi = (ids) => request.delete(`/emps?ids=${ids}`);
+// 查询所有员工
+export const queryListApi = () => request.get("/emps/list");
