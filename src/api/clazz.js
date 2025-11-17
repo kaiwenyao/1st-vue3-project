@@ -27,3 +27,7 @@ export const queryByIdApi = (id) => {
 export const deleteByIdApi = (id) => {
   return request.delete(`/clazzs/${id}`);
 };
+// 列表查询 list
+export const queryClazzListApi = () => {
+  return request.get("/clazzs/list");
+}
